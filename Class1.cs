@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace POOtriangulo
+namespace POOnomes
 {
-    internal class Triangulo
+    class Pessoa
     {
-        internal double A;
-        internal double B;
-        internal double C;
+        public string nome;
+        public int idade;
     }
 }

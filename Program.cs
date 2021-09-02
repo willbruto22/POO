@@ -1,53 +1,41 @@
-﻿
-using POOtriangulo;
+﻿using POOnomes;
 using System;
-using System.Globalization;
 
-namespace Exec_24_08
+namespace Exec_01
 {
     class Program
     {
-        public static void Main(string[] args)
+
+
+        public static void Main(String[] args)
         {
-            //declaração de variaveis estrutural
 
-            //double xA, xB, xC, yA, yB, yC;
+            Pessoa x, y;
 
-            Triangulo x, y;
-            x = new Triangulo();
-            y = new Triangulo();
+            x = new Pessoa();
+            y = new Pessoa();
 
 
-            Console.WriteLine("Entre com as medidas do triângulo X:");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite o nome da pessoa: ");
+            x.nome = Console.ReadLine();
+            Console.WriteLine("Digite a idade da pessoa: ");
+            x.idade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Entre com as medidas do triângulo Y:");
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite o nome da pessoa: ");
+            y.nome = Console.ReadLine();
+            Console.WriteLine("Digite a idade da pessoa: ");
+            y.idade = int.Parse(Console.ReadLine());
 
-            double p = (x.A + x.B + x.C) / 2.0;
-            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p * x.C));
-
-            p = (y.A + y.B + y.C) / 2.0;
-            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p * y.C));
-
-            Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
-            Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
-
-            if (areaX > areaY)
+            if (x.idade > y.idade)
             {
-                Console.WriteLine("O triângulo com a maior área é o: X");
+                Console.WriteLine("Pessoa mais velha: " + x.nome);
             }
             else
             {
-                Console.WriteLine("O triângulo com a maior área é o:  Y");
+                Console.WriteLine("Pessoa mais velha: " + y.nome);
             }
+
         }
 
     }
-
-  
 }
